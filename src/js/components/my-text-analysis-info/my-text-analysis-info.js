@@ -24,7 +24,7 @@ template.innerHTML = `
 
 </style>
 <div id="my-text-analysis-info-container">
-  <h1>Welcome to the text analysis app</h1>
+  <h1>Welcome to the text analysis app.</h1>
   <p>Here you can analyze your text and get information about it.</p>
   </div>
 </div>

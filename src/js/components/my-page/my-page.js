@@ -6,6 +6,8 @@
  */
 
 import '../my-text-analysis-info'
+import '../my-textarea'
+import '../my-word-count'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
@@ -28,34 +30,45 @@ template.innerHTML = `
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    flex-direction: column;
   }
 
   #components-container {
     display: flex;
-    flex-direction: row;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-direction: column;
     align-items: center;
+    backdrop-filter: blur(10px);
   }
 </style>
 <div id="my-page-container">
+  <my-text-analysis-info></my-text-analysis-info>
   <div id="components-container">
-    <my-text-analysis-info></my-text-analysis-info>
+    <my-textarea></my-textarea>
+    <my-word-count></my-word-count>
   </div>
 </div>
 `
 
-customElements.define('my-page',
-  /**
-   * Represents a page.
-   */
-  class extends HTMLElement {
-    /**
-     * Creates an instance of the current type.
-     */
-    constructor () {
-      super()
-
-      this.attachShadow({ mode: 'open' })
-        .appendChild(template.content.cloneNode(true))
-    }
+class MyPage extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
-)
+
+  connectedCallback() {
+    const wordCountComponent = this.shadowRoot.querySelector('my-word-count')
+    const textareaComponent = this.shadowRoot.querySelector('my-textarea')
+
+    textareaComponent.addEventListener('wordCountUpdate', (event) => {
+      const text = event.detail.text;
+      wordCountComponent.updateWordCount(text)
+    })
+  }
+}
+
+customElements.define('my-page', MyPage)
+

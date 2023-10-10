@@ -30,6 +30,17 @@ export class MyTextAnalysisModule {
   }
 
   /**
+   * Counts the number of words in the input text.
+   * @param {string} text - The input text to analyze.
+   * @returns {number} - The word count.
+   *
+   */
+  wordCount(text) {
+    const words = text.split(/\s+/).filter(word => word !== '')
+    return words.length
+  }  
+
+  /**
    * Counts the number of characters in the input text.
    *
    * @param {string} text - The input text to count characters from.
