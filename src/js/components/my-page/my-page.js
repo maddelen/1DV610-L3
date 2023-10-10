@@ -5,7 +5,7 @@
  * @version 1.0.0
  */
 
-// import '../test-app'
+import '../my-text-analysis-info'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
@@ -38,7 +38,7 @@ template.innerHTML = `
 </style>
 <div id="my-page-container">
   <div id="components-container">
-    <!-- <my-text-analysis></my-text-analysis> -->
+    <my-text-analysis-info></my-text-analysis-info>
   </div>
 </div>
 `
