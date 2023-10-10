@@ -46,12 +46,12 @@ class MyTextarea extends HTMLElement {
   connectedCallback() {
     this.textarea.addEventListener('input', () => {
       const text = this.textarea.value
-      const wordCountEvent = new CustomEvent('wordCountUpdate', {
+      const wordCounterEvent = new CustomEvent('wordCounterUpdate', {
         detail: { text },
         bubbles: true,
         composed: true
       })
-      this.dispatchEvent(wordCountEvent)
+      this.dispatchEvent(wordCounterEvent)
     })
   }
 }

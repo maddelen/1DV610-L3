@@ -5,4 +5,4 @@
  * @version 1.0.0
  */
 
-import './my-word-count.js'
+import './my-word-counter.js'

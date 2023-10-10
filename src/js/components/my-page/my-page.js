@@ -7,18 +7,14 @@
 
 import '../my-text-analysis-info'
 import '../my-textarea'
-import '../my-word-count'
+import '../my-word-counter'
+import '../my-character-counter'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
 const template = document.createElement('template')
 template.innerHTML = `
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
   #my-page-container {
     display: flex;
     justify-content: center;
@@ -42,12 +38,25 @@ template.innerHTML = `
     align-items: center;
     backdrop-filter: blur(10px);
   }
+
+  #container-one {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  }
+
 </style>
 <div id="my-page-container">
   <my-text-analysis-info></my-text-analysis-info>
   <div id="components-container">
     <my-textarea></my-textarea>
-    <my-word-count></my-word-count>
+  <div id=container-one>
+    <my-word-counter></my-word-counter>
+    <my-character-counter></my-character-counter>
+  </div>
   </div>
 </div>
 `
@@ -60,12 +69,14 @@ class MyPage extends HTMLElement {
   }
 
   connectedCallback() {
-    const wordCountComponent = this.shadowRoot.querySelector('my-word-count')
+    const wordCounterComponent = this.shadowRoot.querySelector('my-word-counter')
     const textareaComponent = this.shadowRoot.querySelector('my-textarea')
+    const characterCountComponent = this.shadowRoot.querySelector('my-character-counter')
 
-    textareaComponent.addEventListener('wordCountUpdate', (event) => {
-      const text = event.detail.text;
-      wordCountComponent.updateWordCount(text)
+    textareaComponent.addEventListener('wordCounterUpdate', (event) => {
+      const text = event.detail.text
+      wordCounterComponent.updateWordCounter(text)
+      characterCountComponent.updateCharacterCounter(text)
     })
   }
 }
