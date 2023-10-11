@@ -9,6 +9,7 @@ import '../my-text-analysis-info'
 import '../my-textarea'
 import '../my-word-counter'
 import '../my-character-counter'
+import '../my-sentence-counter'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
@@ -56,6 +57,7 @@ template.innerHTML = `
   <div id=container-one>
     <my-word-counter></my-word-counter>
     <my-character-counter></my-character-counter>
+    <my-sentence-counter></my-sentence-counter>
   </div>
   </div>
 </div>
@@ -72,11 +74,13 @@ class MyPage extends HTMLElement {
     const wordCounterComponent = this.shadowRoot.querySelector('my-word-counter')
     const textareaComponent = this.shadowRoot.querySelector('my-textarea')
     const characterCountComponent = this.shadowRoot.querySelector('my-character-counter')
+    const sentenceCountComponent = this.shadowRoot.querySelector('my-sentence-counter')
 
     textareaComponent.addEventListener('wordCounterUpdate', (event) => {
       const text = event.detail.text
       wordCounterComponent.updateWordCounter(text)
       characterCountComponent.updateCharacterCounter(text)
+      sentenceCountComponent.updateSentenceCounter(text)
     })
   }
 }
