@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyLanguageAnalyzer component.
+ */
 class MyLanguageAnalyzer extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyLanguageAnalyzer.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyLanguageAnalyzer extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  analyzeLanguage(text) {
+  /**
+   * Analyzes the language.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  analyzeLanguage (text) {
     const analyzedLanguage = this.textAnalysisModule.analyzeLanguage(text)
     this.analyzedLanguageElement.textContent = analyzedLanguage
   }

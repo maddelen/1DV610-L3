@@ -33,19 +33,33 @@ textareaTemplate.innerHTML = `
 </div>
 `
 
+/**
+ * MyTextarea component.
+ */
 class MyTextarea extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyTextarea.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.appendChild(textareaTemplate.content.cloneNode(true))
     this.textarea = this.shadowRoot.getElementById('input-text')
   }
 
-  get value() {
+  /**
+   * Returns the value of the textarea.
+   *
+   * @returns {string} The value of the textarea.
+   */
+  get value () {
     return this.textarea.value
   }
 
-  connectedCallback() {
+  /**
+   * Sets the value of the textarea.
+   */
+  connectedCallback () {
     this.textarea.addEventListener('input', () => {
       const text = this.textarea.value
       const wordCounterEvent = new CustomEvent('wordCounterUpdate', {

@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyUppercaseCounter component.
+ */
 class MyUppercaseCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyUppercaseCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyUppercaseCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateUppercaseCounter(text) {
+  /**
+   * Updates the uppercase count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateUppercaseCounter (text) {
     const uppercaseCounter = this.textAnalysisModule.countUppercase(text)
     this.uppercaseCounterElement.textContent = uppercaseCounter
   }

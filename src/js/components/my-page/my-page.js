@@ -120,14 +120,23 @@ template.innerHTML = `
 </div>
 `
 
+/**
+ * Define the my-page web component.
+ */
 class MyPage extends HTMLElement {
-  constructor() {
+  /**
+   * Creates an instance of MyPage.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
 
-  connectedCallback() {
+  /**
+   * Called after the element is inserted into the DOM.
+   */
+  connectedCallback () {
     const wordCounterComponent = this.shadowRoot.querySelector('my-word-counter')
     const textareaComponent = this.shadowRoot.querySelector('my-textarea')
     const characterCountComponent = this.shadowRoot.querySelector('my-character-counter')
@@ -143,7 +152,6 @@ class MyPage extends HTMLElement {
     const specialCharacterCounterComponent = this.shadowRoot.querySelector('my-special-character-counter')
     const languageAnalyzerComponent = this.shadowRoot.querySelector('my-language-analyzer')
     const inputValidatorComponent = this.shadowRoot.querySelector('my-input-validator')
-
 
     textareaComponent.addEventListener('wordCounterUpdate', (event) => {
       const text = event.detail.text
@@ -166,4 +174,3 @@ class MyPage extends HTMLElement {
 }
 
 customElements.define('my-page', MyPage)
-

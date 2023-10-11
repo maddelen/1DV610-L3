@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyConsonantCounter component.
+ */
 class MyConsonantCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyConsonantCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyConsonantCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateConsonantCounter(text) {
+  /**
+   * Updates the consonant count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateConsonantCounter (text) {
     const consonantCounter = this.textAnalysisModule.countConsonants(text)
     this.consonantCounterElement.textContent = consonantCounter
   }

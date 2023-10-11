@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyVowelCounter component.
+ */
 class MyVowelCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyVowelCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyVowelCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateVowelCounter(text) {
+  /**
+   * Updates the vowel count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateVowelCounter (text) {
     const vowelCounter = this.textAnalysisModule.countVowels(text)
     this.vowelCounterElement.textContent = vowelCounter
   }

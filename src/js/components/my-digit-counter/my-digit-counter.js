@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyDigitCounter component.
+ */
 class MyDigitCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyDigitCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyDigitCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateDigitCounter(text) {
+  /**
+   * Updates the digit count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateDigitCounter (text) {
     const digitCounter = this.textAnalysisModule.countDigits(text)
     this.digitCounterElement.textContent = digitCounter
   }

@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyLowercaseCounter component.
+ */
 class MyLowercaseCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyLowercaseCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyLowercaseCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateLowercaseCounter(text) {
+  /**
+   * Updates the lowercase count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateLowercaseCounter (text) {
     const lowercaseCounter = this.textAnalysisModule.countLowercase(text)
     this.lowercaseCounterElement.textContent = lowercaseCounter
   }

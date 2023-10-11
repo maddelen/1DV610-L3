@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyFindMostFrequentWord component.
+ */
 class MyFindMostFrequentWord extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyFindMostFrequentWord.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyFindMostFrequentWord extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateMostFrequentWord(text) {
+  /**
+   * Finds the most frequent word.
+   *
+   * @param  {string} text - The text to be analyzed.
+   */
+  updateMostFrequentWord (text) {
     const mostFrequentWord = this.textAnalysisModule.findMostFrequentWord(text)
     this.mostFrequentWordElement.textContent = mostFrequentWord
   }

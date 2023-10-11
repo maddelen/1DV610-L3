@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyCharacterCounter component.
+ */
 class MyCharacterCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyCharacterCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -19,7 +25,12 @@ class MyCharacterCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateCharacterCounter(text) {
+  /**
+   * Updates the character count.
+   *
+   * @param {string}text - The text to be analyzed.
+   */
+  updateCharacterCounter (text) {
     const characterCounter = this.textAnalysisModule.countCharacters(text)
     this.characterCounterElement.textContent = characterCounter
   }

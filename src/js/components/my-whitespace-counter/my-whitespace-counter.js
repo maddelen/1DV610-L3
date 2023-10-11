@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyWhitespaceCounter component.
+ */
 class MyWhitespaceCounter extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyWhitespaceCounter.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -18,7 +24,12 @@ class MyWhitespaceCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateWhitespaceCounter(text) {
+  /**
+   * Updates the whitespace count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateWhitespaceCounter (text) {
     const whitespaceCounter = this.textAnalysisModule.countWhitespace(text)
     this.whitespaceCounterElement.textContent = whitespaceCounter
   }

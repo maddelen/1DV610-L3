@@ -1,6 +1,12 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyWordCounter component.
+ */
 class MyWordCounter extends HTMLElement {
+  /**
+   * Constructor for MyWordCounter.
+   */
   constructor () {
     super()
     this.attachShadow({ mode: 'open' })
@@ -19,7 +25,12 @@ class MyWordCounter extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  updateWordCounter(text) {
+  /**
+   * Updates the word count.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  updateWordCounter (text) {
     const wordCounter = this.textAnalysisModule.wordCount(text)
     this.wordCounterElement.textContent = wordCounter
   }

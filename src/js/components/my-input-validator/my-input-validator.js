@@ -1,7 +1,13 @@
 import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
 
+/**
+ * MyInputValidator component.
+ */
 class MyInputValidator extends HTMLElement {
-  constructor() {
+  /**
+   * Constructor for MyInputValidator.
+   */
+  constructor () {
     super()
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.innerHTML = `
@@ -22,18 +28,22 @@ class MyInputValidator extends HTMLElement {
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 
-  validateUserInput(text) {
-    const validationError = this.textAnalysisModule.validateUserInput(text);
+  /**
+   * Validates user input. If there's an error, show the component.
+   *
+   * @param {string} text - The text to be analyzed.
+   */
+  validateUserInput (text) {
+    const validationError = this.textAnalysisModule.validateUserInput(text)
     if (validationError.errorMessage) {
       // Show the component if there's a validation error
-      this.shadowRoot.querySelector('#my-input-validator-container').style.display = 'block';
-      this.validationErrorElement.textContent = validationError.errorMessage;
+      this.shadowRoot.querySelector('#my-input-validator-container').style.display = 'block'
+      this.validationErrorElement.textContent = validationError.errorMessage
     } else {
       // Hide the component if there's no validation error
-      this.shadowRoot.querySelector('#my-input-validator-container').style.display = 'none';
+      this.shadowRoot.querySelector('#my-input-validator-container').style.display = 'none'
     }
   }
-  
 }
 
 customElements.define('my-input-validator', MyInputValidator)
