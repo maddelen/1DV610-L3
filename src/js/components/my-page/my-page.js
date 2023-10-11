@@ -15,6 +15,11 @@ import '../my-find-most-frequent-word'
 import '../my-vowel-counter'
 import '../my-consonant-counter'
 import '../my-uppercase-counter'
+import '../my-lowercase-counter'
+import '../my-digit-counter'
+import '../my-whitespace-counter'
+import '../my-special-character-counter'
+import '../my-language-analyzer'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
@@ -61,6 +66,15 @@ template.innerHTML = `
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+#container-three {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 #containers-wrapper {
     display: flex; /* Display container-one and container-two next to each other */
 }
@@ -81,6 +95,15 @@ template.innerHTML = `
             <my-vowel-counter></my-vowel-counter>
             <my-consonant-counter></my-consonant-counter>
             <my-uppercase-counter></my-uppercase-counter>
+        </div>
+        <div id="container-three">
+            <my-lowercase-counter></my-lowercase-counter>
+            <my-digit-counter></my-digit-counter>
+            <my-whitespace-counter></my-whitespace-counter>
+            <my-special-character-counter></my-special-character-counter>
+        </div>
+        <div id="language-container">
+          <my-language-analyzer></my-language-analyzer>
         </div>
     </div>
 </div>
@@ -103,6 +126,12 @@ class MyPage extends HTMLElement {
     const vowelCounterComponent = this.shadowRoot.querySelector('my-vowel-counter')
     const consonantCounterComponent = this.shadowRoot.querySelector('my-consonant-counter')
     const uppercaseCounterComponent = this.shadowRoot.querySelector('my-uppercase-counter')
+    const lowercaseCounterComponent = this.shadowRoot.querySelector('my-lowercase-counter')
+    const digitCounterComponent = this.shadowRoot.querySelector('my-digit-counter')
+    const whitespaceCounterComponent = this.shadowRoot.querySelector('my-whitespace-counter')
+    const specialCharacterCounterComponent = this.shadowRoot.querySelector('my-special-character-counter')
+    const languageAnalyzerComponent = this.shadowRoot.querySelector('my-language-analyzer')
+
 
     textareaComponent.addEventListener('wordCounterUpdate', (event) => {
       const text = event.detail.text
@@ -114,6 +143,11 @@ class MyPage extends HTMLElement {
       vowelCounterComponent.updateVowelCounter(text)
       consonantCounterComponent.updateConsonantCounter(text)
       uppercaseCounterComponent.updateUppercaseCounter(text)
+      lowercaseCounterComponent.updateLowercaseCounter(text)
+      digitCounterComponent.updateDigitCounter(text)
+      whitespaceCounterComponent.updateWhitespaceCounter(text)
+      specialCharacterCounterComponent.updateSpecialCharacterCounter(text)
+      languageAnalyzerComponent.analyzeLanguage(text)
     })
   }
 }
