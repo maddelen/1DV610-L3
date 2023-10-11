@@ -20,6 +20,7 @@ import '../my-digit-counter'
 import '../my-whitespace-counter'
 import '../my-special-character-counter'
 import '../my-language-analyzer'
+import '../my-input-validator'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
@@ -27,17 +28,17 @@ const template = document.createElement('template')
 template.innerHTML = `
 <style>
   #my-page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background: url("${IMG_URL}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("${IMG_URL}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  flex-direction: column;
   }
 
   #components-container {
@@ -46,41 +47,51 @@ template.innerHTML = `
     background-color: rgba(255, 255, 255, 0.5);
     align-items: center;
     backdrop-filter: blur(10px);
-}
+  }
 
-#container-one {
+  #container-one {
     background-color: white;
     margin: 10px;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+  }
 
-#container-two {
+  #container-two {
     background-color: white;
     margin: 10px;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+  }
 
-#container-three {
+  #container-three {
     background-color: white;
     margin: 10px;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+  }
 
-#containers-wrapper {
+  #language-container {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  #containers-wrapper {
     display: flex; /* Display container-one and container-two next to each other */
-}
+  }
 </style>
 <div id="my-page-container">
   <my-text-analysis-info></my-text-analysis-info>
+  <my-input-validator></my-input-validator>
   <div id="components-container">
     <my-textarea></my-textarea>
     <div id="containers-wrapper">
@@ -131,6 +142,7 @@ class MyPage extends HTMLElement {
     const whitespaceCounterComponent = this.shadowRoot.querySelector('my-whitespace-counter')
     const specialCharacterCounterComponent = this.shadowRoot.querySelector('my-special-character-counter')
     const languageAnalyzerComponent = this.shadowRoot.querySelector('my-language-analyzer')
+    const inputValidatorComponent = this.shadowRoot.querySelector('my-input-validator')
 
 
     textareaComponent.addEventListener('wordCounterUpdate', (event) => {
@@ -148,6 +160,7 @@ class MyPage extends HTMLElement {
       whitespaceCounterComponent.updateWhitespaceCounter(text)
       specialCharacterCounterComponent.updateSpecialCharacterCounter(text)
       languageAnalyzerComponent.analyzeLanguage(text)
+      inputValidatorComponent.validateUserInput(text)
     })
   }
 }
