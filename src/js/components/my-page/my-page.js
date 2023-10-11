@@ -10,6 +10,8 @@ import '../my-textarea'
 import '../my-word-counter'
 import '../my-character-counter'
 import '../my-sentence-counter'
+import '../my-find-longest-word'
+import '../my-find-most-frequent-word'
 
 const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
 
@@ -49,15 +51,27 @@ template.innerHTML = `
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
   }
 
+  #container-two {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  }
 </style>
 <div id="my-page-container">
   <my-text-analysis-info></my-text-analysis-info>
   <div id="components-container">
     <my-textarea></my-textarea>
-  <div id=container-one>
+  <div id="container-one">
     <my-word-counter></my-word-counter>
     <my-character-counter></my-character-counter>
     <my-sentence-counter></my-sentence-counter>
+    <my-find-longest-word></my-find-longest-word>
+  </div>
+  <div id="container-two">
+    <my-find-most-frequent-word></my-find-most-frequent-word>
   </div>
   </div>
 </div>
@@ -75,12 +89,16 @@ class MyPage extends HTMLElement {
     const textareaComponent = this.shadowRoot.querySelector('my-textarea')
     const characterCountComponent = this.shadowRoot.querySelector('my-character-counter')
     const sentenceCountComponent = this.shadowRoot.querySelector('my-sentence-counter')
+    const longestWordComponent = this.shadowRoot.querySelector('my-find-longest-word')
+    const mostFrequentWordComponent = this.shadowRoot.querySelector('my-find-most-frequent-word')
 
     textareaComponent.addEventListener('wordCounterUpdate', (event) => {
       const text = event.detail.text
       wordCounterComponent.updateWordCounter(text)
       characterCountComponent.updateCharacterCounter(text)
       sentenceCountComponent.updateSentenceCounter(text)
+      longestWordComponent.updateLongestWord(text)
+      mostFrequentWordComponent.updateMostFrequentWord(text)
     })
   }
 }
