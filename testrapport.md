@@ -1,15 +1,32 @@
-# Testrapport - Manuella tester
+## Vision
+
+## Framtida visioner
+
+## Testrapport - Manuella tester
 
 | Test | Beskrivning               | Utfall PASS/FAIL |
 |------|---------------------------|------------------|
 | TC1 | Starta applikationen och se om man kommer till startsidan. |  Pass  |
 | TC2 | Testar att skriva in en text och se om den analyserar texten som skrivs/skrivits.|  Pass  |
-| TC3 | Testar att skriva in en kodsnutt.|  Pass  |
-| TC4 | Testar att kopiera in massa text. |  Pass  |
+| TC3 | Testar att skriva in en text och se om den analyserar antalet ord i texten som skrivs/skrivits.|  Pass  |
+| TC4 | Testar att skriva in en text och se om den analyserar antalet tecken i texten som skrivs/skrivits.|  Pass  |
+| TC5 | Testar att skriva in en text och se om den analyserar antalet meningar i  texten som skrivs/skrivits.|  Pass  |
+| TC6 | Testar att skriva in en text och se om den hittar det längsta ordet i texten som skrivs/skrivits.|  Pass  |
+| TC7 | Testar att skriva in en text och se om den hittar det mest använda ordet i texten som skrivs/skrivits.|  Pass  |
+| TC8 | Testar att skriva in en text och se om den analyserar antalet vokaler i texten som skrivs/skrivits.|  Pass  |
+| TC9 | Testar att skriva in en text och se om den analyserar  antalet konsonanter i texten som skrivs/skrivits.|  Pass  |
+| TC10 | Testar att skriva in en text och se om den analyserar antalet versaler i texten som skrivs/skrivits.|  Pass  |
+| TC11 | Testar att skriva in en text och se om den analyserar antalet gemener i  texten som skrivs/skrivits.|  Pass  |
+| TC12 | Testar att skriva in en text och se om den analyserar antalet siffror i  texten som skrivs/skrivits.|  Pass  |
+| TC13 | Testar att skriva in en text och se om den analyserar antalet mellanslag i  texten som skrivs/skrivits.|  Pass  |
+| TC14 | Testar att skriva in en text och se om den analyserar antalet specialtecken i  texten som skrivs/skrivits.|  Pass  |
+| TC15 | Testar att skriva in en text och se om den analyserar vilket språk texten är skriven på.|  Pass (När texten skrivits klart) |
+| TC16 | Testar att skriva in en kodsnutt.|  Pass  |
+| TC17 | Testar att kopiera in massa text. |  Pass  |
 
 <br>
 
-### UC1
+### TC 1
 <b>Beskrivning:</b> Starta applikationen och se om man kommer till startsidan.
 
 <b>Testinstruktioner:</b>
@@ -22,7 +39,7 @@ Nu borde startsidan av applikationen visas.
 
 <hr>
 
-### UC2
+### TC 2 - 15
 <b>Beskrivning:</b> Testar att skriva in en text och se om den analyserar texten som skrivs/skrivits.
 
 <b>Testinstruktioner:</b>
@@ -37,7 +54,7 @@ Texten ska börja analyseras i realtid och du ska kunna se antalet ord, tecken, 
 
 <hr>
 
-### UC3
+### TC 16
 <b>Beskrivning:</b> Testar att skriva in en kodsnutt.
 
 <b>Testinstruktioner:</b>
@@ -54,7 +71,7 @@ Du bör direkt få ett meddelande som säger att det inte är tillåtet att anv�
 
 <hr>
 
-### UC4
+### TC 17
 <b>Beskrivning:</b> Testar att kopiera in massa text.
 
 <b>Testinstruktioner:</b>
