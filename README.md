@@ -29,8 +29,8 @@ npm run dev
 
 Here is an example on how to use the application.
 
-![test-method](./src/images/test-method.png)
+![Start view](./src/images/start.png)
 1. This is the view when starting the application.
 
-![test-method](./src/images/test-method.png)
+![Analyzing text](./src/images/analyzing-text.png)
 2. When you enter a text it will be analyzed in real time.
