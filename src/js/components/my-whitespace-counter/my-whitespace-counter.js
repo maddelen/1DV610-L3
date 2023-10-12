@@ -1,4 +1,16 @@
-import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
+import { MyTextAnalysisModule } from '../../../../my-text-analysis-module/my-text-analysis-module.js'
+
+// Define the HTML template as a template element
+const template = document.createElement('template')
+template.innerHTML = `
+<style>
+  #my-whitespace-counter-container {
+  }
+</style>
+<div id="my-whitespace-counter-container">
+  <p>Whitespace Count: <span id="whitespace-counter">0</span></p>
+</div>
+`
 
 /**
  * MyWhitespaceCounter component.
@@ -10,17 +22,11 @@ class MyWhitespaceCounter extends HTMLElement {
   constructor () {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.innerHTML = `
-      <style>
-        #my-whitespace-counter-container {
-        }
-      </style>
-      <div id="my-whitespace-counter-container">
-        <p>Whitespace Count: <span id="whitespace-counter">0</span></p>
-      </div>
-    `
-    this.whitespaceCounterElement = this.shadowRoot.getElementById('whitespace-counter')
 
+    // Clone the content from the template and append it to the shadow DOM
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+    this.whitespaceCounterElement = this.shadowRoot.getElementById('whitespace-counter')
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 

@@ -1,4 +1,4 @@
-import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
+import { MyTextAnalysisModule } from '../../../../my-text-analysis-module/my-text-analysis-module.js'
 
 /**
  * MySpecialCharacterCounter component.

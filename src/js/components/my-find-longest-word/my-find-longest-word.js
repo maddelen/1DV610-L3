@@ -1,4 +1,16 @@
-import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
+import { MyTextAnalysisModule } from '../../../../my-text-analysis-module/my-text-analysis-module.js'
+
+// Define the HTML template as a template element
+const template = document.createElement('template')
+template.innerHTML = `
+<style>
+  #my-find-longest-word-container {
+  }
+</style>
+<div id="my-find-longest-word-container">
+  <p>Longest Word: <span id="longest-word"></span></p>
+</div>
+`
 
 /**
  * MyFindLongestWord component.
@@ -10,17 +22,11 @@ class MyFindLongestWord extends HTMLElement {
   constructor () {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.innerHTML = `
-      <style>
-        #my-find-longest-word-container {
-        }
-      </style>
-      <div id="my-find-longest-word-container">
-        <p>Longest Word: <span id="longest-word"></span></p>
-      </div>
-    `
-    this.longestWordElement = this.shadowRoot.getElementById('longest-word')
 
+    // Clone the content from the template and append it to the shadow DOM
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+    this.longestWordElement = this.shadowRoot.getElementById('longest-word')
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 

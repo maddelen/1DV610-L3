@@ -1,7 +1,7 @@
 ## Vision
 
 ## Framtida visioner
-
+Utöka språk analysen. Just nu finns det fem olika språk applikationen kan analysera. Det är svenska, engelska, tyska, franska och spanska.
 ## Testrapport - Manuella tester
 
 | Test | Beskrivning               | Utfall PASS/FAIL |
@@ -35,7 +35,9 @@
 3. Öppna URL:en som finns liknande detta exempel: `Local:   http://localhost:5173/` i en webbläsare.
 
 <b>Förväntad resultat:</b>
-Nu borde startsidan av applikationen visas.
+Nu borde startsidan av applikationen visas (se bild nedan).
+
+![Start](/src/images/start.png)
 
 <hr>
 
@@ -50,8 +52,9 @@ Nu borde startsidan av applikationen visas.
 
 
 <b>Förväntad resultat:</b>
-Texten ska börja analyseras i realtid och du ska kunna se antalet ord, tecken, meningar, vilket det längsta ordet i din text är samt vilket ord som förekommer oftast. Du ska även kunna se en ytterligare analys av texten som visar hur många gemener, versaler, siffror, blanksteg, specialtecken, vokaler och konsonanter som finns i texten. Sen kommer du även kunna se ett försök till att tolka vilket språk det är du skriver på.
+Texten ska börja analyseras i realtid och du ska kunna se antalet ord, tecken, meningar, vilket det längsta ordet i din text är samt vilket ord som förekommer oftast. Du ska även kunna se en ytterligare analys av texten som visar hur många gemener, versaler, siffror, blanksteg, specialtecken, vokaler och konsonanter som finns i texten. Sen kommer du även kunna se ett försök till att tolka vilket språk det är du skriver på (se bild nedan).
 
+![Analyzing text](/src/images/analyzing-text.png)
 <hr>
 
 ### TC 16
@@ -67,8 +70,9 @@ Texten ska börja analyseras i realtid och du ska kunna se antalet ord, tecken, 
 
 
 <b>Förväntad resultat:</b>
-Du bör direkt få ett meddelande som säger att det inte är tillåtet att använda dessa tecken < >.
+Du bör direkt få ett meddelande som säger att det inte är tillåtet att använda dessa tecken < > (se bild nedan).
 
+![Error message1](/src/images/error-message1.png)
 <hr>
 
 ### TC 17
@@ -78,9 +82,13 @@ Du bör direkt få ett meddelande som säger att det inte är tillåtet att anv�
 1. Öppna upp terminalen i visual studio code.
 2. Skriv in `npm run dev`
 3. Öppna URL:en som finns liknande detta exempel: `Local:   http://localhost:5173/` i en webbläsare.
-4. Klicka i textfältet och kopiera in följande kodsnutt 20 gånger: <br>
-"Mauris vel fermentum sapien. Vestibulum dignissim est non metus fermentum, a fermentum metus bibendum. Praesent nec justo ligula. Fusce scelerisque suscipit libero, eu convallis eros euismod et. Vestibulum posuere augue at erat feugiat vestibulum. Vivamus bibendum quam at aliquet hendrerit. Maecenas tristique nisl ut purus volutpat, non vulputate odio aliquet. In hac habitasse platea dictumst. Maecenas non sagittis ligula. Suspendisse ut est non ante suscipit volutpat. Integer placerat, dui non hendrerit ultrices, justo nisl hendrerit mi, ac volutpat leo velit at nisl. Vestibulum at fermentum tellus. Integer et nisl vitae augue gravida iaculis a eget justo. Sed malesuada metus eu ipsum mattis, ut faucibus purus fringilla"
+4. Klicka i textfältet och kopiera in följande kodsnutt 12 gånger: <br>
+"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
 
 
 <b>Förväntad resultat:</b>
-Du bör få ett meddelande som säger att det inte är tillåtet att skriva mer än 2000 ord.
+Du bör få ett meddelande som säger att det inte är tillåtet att skriva mer än 2000 ord (se bild nedan).
+
+![Error message2](/src/images/error-message2.png)

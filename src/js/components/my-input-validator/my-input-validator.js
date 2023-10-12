@@ -1,4 +1,20 @@
-import { MyTextAnalysisModule } from '../my-text-analysis-module/my-text-analysis-module.js'
+import { MyTextAnalysisModule } from '../../../../my-text-analysis-module/my-text-analysis-module.js'
+
+// Define the HTML template as a template element
+const template = document.createElement('template')
+template.innerHTML = `
+<style>
+  #my-input-validator-container {
+    display: none; /* Initially hide the component */
+    padding: 10px;
+    color: red;
+  }
+
+</style>
+<div id="my-input-validator-container">
+  <p>Sorry buddy! <span id="validation-error-message"></span></p>
+</div>
+`
 
 /**
  * MyInputValidator component.
@@ -10,21 +26,11 @@ class MyInputValidator extends HTMLElement {
   constructor () {
     super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.innerHTML = `
-      <style>
-        #my-input-validator-container {
-          display: none /* Initially hide the component */
-        }
-        #validation-error-message {
-          color: red;
-        }
-      </style>
-      <div id="my-input-validator-container">
-        <p>Sorry buddy! <span id="validation-error-message"></span></p>
-      </div>
-    `
-    this.validationErrorElement = this.shadowRoot.getElementById('validation-error-message')
 
+    // Clone the content from the template and append it to the shadow DOM
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+    this.validationErrorElement = this.shadowRoot.getElementById('validation-error-message')
     this.textAnalysisModule = new MyTextAnalysisModule()
   }
 

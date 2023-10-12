@@ -62,6 +62,10 @@ class MyTextarea extends HTMLElement {
   connectedCallback () {
     this.textarea.addEventListener('input', () => {
       const text = this.textarea.value
+      // Create a custom event with the name 'wordCounterUpdate'
+      // and set 'bubbles' to true, which allows the event to propagate up
+      // the DOM tree from the element that dispatched it to its ancestors.
+      // This means that parent elements can also listen for and respond to this event.
       const wordCounterEvent = new CustomEvent('wordCounterUpdate', {
         detail: { text },
         bubbles: true,

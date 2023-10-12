@@ -22,11 +22,13 @@ import '../my-special-character-counter'
 import '../my-language-analyzer'
 import '../my-input-validator'
 
-const IMG_URL = (new URL('images/bg.jpg', import.meta.url)).href
+const IMG_URL = (new URL('images/sky.jpg', import.meta.url)).href
 
 const template = document.createElement('template')
 template.innerHTML = `
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap');
+
   #my-page-container {
   display: flex;
   justify-content: center;
@@ -39,13 +41,15 @@ template.innerHTML = `
   background-position: center;
   overflow: hidden;
   flex-direction: column;
+  font-family: 'Martian Mono', monospace
   }
 
   #components-container {
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     background-color: rgba(255, 255, 255, 0.5);
     align-items: center;
+    border-radius: 5px;
     backdrop-filter: blur(10px);
   }
 
@@ -86,35 +90,35 @@ template.innerHTML = `
   }
 
   #containers-wrapper {
-    display: flex; /* Display container-one and container-two next to each other */
+    display: flex;
   }
 </style>
 <div id="my-page-container">
   <my-text-analysis-info></my-text-analysis-info>
-  <my-input-validator></my-input-validator>
   <div id="components-container">
+    <my-input-validator></my-input-validator>
     <my-textarea></my-textarea>
     <div id="containers-wrapper">
         <div id="container-one">
             <my-word-counter></my-word-counter>
             <my-character-counter></my-character-counter>
             <my-sentence-counter></my-sentence-counter>
-            <my-find-longest-word></my-find-longest-word>
-        </div>
-        <div id="container-two">
-            <my-find-most-frequent-word></my-find-most-frequent-word>
+          </div>
+          <div id="container-two">
             <my-vowel-counter></my-vowel-counter>
             <my-consonant-counter></my-consonant-counter>
             <my-uppercase-counter></my-uppercase-counter>
-        </div>
-        <div id="container-three">
             <my-lowercase-counter></my-lowercase-counter>
+          </div>
+          <div id="container-three">
             <my-digit-counter></my-digit-counter>
             <my-whitespace-counter></my-whitespace-counter>
             <my-special-character-counter></my-special-character-counter>
-        </div>
-        <div id="language-container">
-          <my-language-analyzer></my-language-analyzer>
+          </div>
+          <div id="language-container">
+            <my-find-longest-word></my-find-longest-word>
+            <my-language-analyzer></my-language-analyzer>
+            <my-find-most-frequent-word></my-find-most-frequent-word>
         </div>
     </div>
 </div>
@@ -155,6 +159,8 @@ class MyPage extends HTMLElement {
 
     textareaComponent.addEventListener('wordCounterUpdate', (event) => {
       const text = event.detail.text
+
+      inputValidatorComponent.validateUserInput(text)
       wordCounterComponent.updateWordCounter(text)
       characterCountComponent.updateCharacterCounter(text)
       sentenceCountComponent.updateSentenceCounter(text)
@@ -168,7 +174,6 @@ class MyPage extends HTMLElement {
       whitespaceCounterComponent.updateWhitespaceCounter(text)
       specialCharacterCounterComponent.updateSpecialCharacterCounter(text)
       languageAnalyzerComponent.analyzeLanguage(text)
-      inputValidatorComponent.validateUserInput(text)
     })
   }
 }
