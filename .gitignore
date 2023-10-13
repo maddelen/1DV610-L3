@@ -188,6 +188,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # Module files
-my-text-analysis-module/
+1DV610-L3/my-text-analysis-module/
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows,visualstudiocode
