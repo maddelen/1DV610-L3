@@ -65,10 +65,10 @@ Klasser ska vara små, precis som i kapitel 3 med funktioner. Jag har små klass
 <hr>
 
 ## Kap 11 - Systems.
-Jag började litet. Jag skapade en plats för att displaya min textanalysator (my-page komponenten). En komponent för mitt textfält och en komponent för att räkna antalet ord i textfältet. Sedan växta det och textanalysatorn fick fler funktioner. Då jag viste att det var många funktioner textanalysatorn skulle göra så var komponenter den struktur jag valde att gå med från start. Det är lätt att lägga till/ta bort komponenter. Det är inte alltid man vet hur stort eller litet ett projekt kommer vara, "Scaling Up" så som i boken tar upp är ett bra exempel på det. Det går inte att få allt rätt på första försöket. Hur skulle en liten by veta att breda vägar skulle behövas flera år fram? "It is a myth that we can get systems “right the first time.” Instead, we should implement only today’s stories, then refactor and expand the system to implement new stories tomorrow." 
+Jag började litet. Jag skapade en plats för att displaya min textanalysator (my-page komponenten). En komponent för mitt textfält och en komponent för att räkna antalet ord i textfältet. Sedan växta det och textanalysatorn fick fler funktioner. Då jag viste att det var många funktioner textanalysatorn skulle göra så var komponenter den struktur jag valde att gå med från start. Det är lätt att lägga till/ta bort komponenter. Det är inte alltid man vet hur stort eller litet ett projekt kommer vara, "Scaling Up" så som i boken tar upp är ett bra exempel på det. Det går inte att få allt rätt på första försöket. Hur skulle en liten by veta att breda vägar skulle behövas flera år fram? "It is a myth that we can get systems “right the first time.” Instead, we should implement only today’s stories, then refactor and expand the system to implement new stories tomorrow." Jag försöker ha en tydlig struktur och indelning på mina filer och mappar.
 
 
-![Kapitel 11](images/kap11.png)
+![Kapitel 11](/src/images/kapitel11.png)
 
 <hr>
 
