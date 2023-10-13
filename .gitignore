@@ -87,6 +87,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+my-text-analysis-module/
 
 # TypeScript v1 declaration files
 typings/
@@ -186,8 +187,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# Module files
-1DV610-L3/my-text-analysis-module/
 
 # End of https://www.gitignore.io/api/node,linux,macos,windows,visualstudiocode
