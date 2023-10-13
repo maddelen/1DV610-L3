@@ -187,4 +187,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Module files
+my-text-analysis-module/
+
 # End of https://www.gitignore.io/api/node,linux,macos,windows,visualstudiocode
