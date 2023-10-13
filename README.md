@@ -10,7 +10,7 @@ This application will be able to count the number of words you entered, the numb
 2. Open a terminal.
 3. Place yourself in the root folder of the application.
 4. Open a terminal in the application folder and input ```npm install``` to install all the dependencies the application needs.
-5. This application uses the Text Analysis module from previous project (https://github.com/maddelen/1DV610-L2).You have to clone it and place it in the application (1DV610-L3).
+5. This application uses the Text Analysis module from previous project (https://github.com/maddelen/1DV610-L2). You have to clone it and place it in the application (1DV610-L3).
 
 ```bash
 npm install
