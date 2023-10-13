@@ -53,7 +53,7 @@ Här är ju automatiska tester något att föredra om man skulle använda sig av
 Precis som författaren tar upp i detta kapitel så är den första instinkten till tester inte prioriterad. Han pratar om "dirty" tests och att det sakta men säkert blev som en snöbollseffekt. Problemen blev bara fler och fler, större och större. Det lades mer tid på att felsöka än att koda. 
 Författaren skriver "...tests must change as the production code evolves". Detta kan jag bara hålla med om. Att koda lite, testa lite är en toppen kombo. Du får lättare för att se vart och när din kod inte gör som den sak. Det är tester som gör din kod flexibel. Jag har valt att göra manuella tester till denna applikation då den har ett tydligt och överskådligt gränssnitt. Jag har även under tiden jag lagt till komponenter testat i gränssnittet för att se att den gör som den ska. 
 
-https://github.com/maddelen/1DV610-L3/blob/main/testrapport.md
+![Kapitel 9](/src/images/kapitel9.png)
 
 <hr>
 
@@ -65,7 +65,7 @@ Klasser ska vara små, precis som i kapitel 3 med funktioner. Jag har små klass
 <hr>
 
 ## Kap 11 - Systems.
-Jag började litet. Jag skapade en plats för att displaya min textanalysator (my-page komponenten). En komponent för mitt textfält och en komponent för att räkna antalet ord i textfältet. Sedan växta det och textanalysatorn fick fler funktioner. Då jag viste att det var många funktioner textanalysatorn skulle göra så var komponenter den struktur jag valde att gå med från start. Det är lätt att lägga till/ta bort komponenter. Det är inte alltid man vet hur stort eller litet ett projekt kommer vara, "Scaling Up" så som i boken tar upp är ett bra exempel på det. Det går inte att få allt rätt på första försöket. Hur skulle en liten by veta att breda vägar skulle behövas flera år fram? "It is a myth that we can get systems “right the first time.” Instead, we should implement only today’s stories, then refactor and expand the system to implement new stories tomorrow." Jag försöker ha en tydlig struktur och indelning på mina filer och mappar.
+Jag började litet. Jag skapade en plats för att displaya min textanalysator (my-page komponenten). En komponent för mitt textfält och en komponent för att räkna antalet ord i textfältet. Sedan växta det och textanalysatorn fick fler funktioner. Då jag viste att det var många funktioner textanalysatorn skulle göra så var komponenter den struktur jag valde att gå med från start. Det är lätt att lägga till/ta bort komponenter. Det är inte alltid man vet hur stort eller litet ett projekt kommer vara, "Scaling Up" så som i boken tar upp är ett bra exempel på det. Det går inte att få allt rätt på första försöket. Hur skulle en liten by veta att breda vägar skulle behövas flera år fram? "It is a myth that we can get systems “right the first time.” Instead, we should implement only today’s stories, then refactor and expand the system to implement new stories tomorrow." Jag försöker ha en tydlig struktur och indelning på mina filer och mappar ifall det skulle behöva ändras i framtiden.
 
 
 ![Kapitel 11](/src/images/kapitel11.png)
@@ -73,4 +73,4 @@ Jag började litet. Jag skapade en plats för att displaya min textanalysator (m
 <hr>
 
 ## Sammanfattning.
-clarity, simplicity, and density of expression.
+Jag tyckte om att läsa Clean Code, den var skriven på ett sätt där det var lätt att hänga med både i texten och i exemplen som gjordes kring det olika kapitlen. Jag kommer ta åt mig mycket av det som står i boken. Insikten att man faktiskt kan ändra i sin kod när man fått den att fungera är kul. Och att om man behöver många kommentarer så kanske det istället är värt att se över koden och ändra den så att kommentarerna inte behövs. Koden man skriver är inte bara till för en själv längre, utan den kan komma att läsas av någon annan och bara att ha den vetskapen i bakhuvet är jättebra. Det kommer hjälpa mig att skriva tydligare kod. Det är självklart delar i boken som jag tycker är lite väl hårt dragna linjer (Don't be cute, Do one thing, Dyadic Functions) men jag förstår tanken bakom dem. Det är det jag uppskattar med boken att när det är delar jag inte håller med om så får jag ändå en klarhet i kring varför författaren anser det vara ett problem. Det var kul att få en annan bild av tester och errorhantering. Hur viktiga dessa faktorer faktiskt är för programmerare. Hur mycket mer givande det är att ha tester att köra när koden ändras och att acceptera att lägga lite extra tid och energi på detta. Det kommer ju tillbaka flerfaldigt.
