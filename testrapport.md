@@ -2,7 +2,7 @@
 Min vision är att kunna använda den här applikationen för tillfällen då man behöver veta till exempel hur många ord en uppsatts, rapport, artikel etc innehåller. Denna applikation analyserar dock det mesta som man kan tänka sig en text innehåller. 
 
 ## Framtida visioner
-Utöka språk analysen. Just nu finns det fem olika språk applikationen kan analysera. Det är svenska, engelska, tyska, franska och spanska.
+Utöka språkanalysen. Just nu finns det fem olika språk applikationen kan analysera. Det är svenska, engelska, tyska, franska och spanska.
 
 ## Testrapport - Manuella tester
 
