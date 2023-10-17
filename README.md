@@ -1,4 +1,4 @@
-# The text analasys application
+# The text analysis application
 
 This is a student project in the course Mjukvarukvalitet 1dv610 at Linneuniversitetet.
 
