@@ -3,35 +3,37 @@ Min vision är att kunna använda den här applikationen för tillfällen då ma
 
 ## Framtida visioner
 Utöka språk analysen. Just nu finns det fem olika språk applikationen kan analysera. Det är svenska, engelska, tyska, franska och spanska.
+
 ## Testrapport - Manuella tester
 
-https://github.com/maddelen/1DV610-L3/issues
-
-| Test | Beskrivning               | Utfall PASS/FAIL |
-|------|---------------------------|------------------|
-| TC1 | Starta applikationen och se om man kommer till startsidan. |  Pass  |
-| TC2 | Testar att skriva in en text och se om den analyserar texten som skrivs/skrivits.|  Pass  |
-| TC3 | Testar att skriva in en text och se om den analyserar antalet ord i texten som skrivs/skrivits.|  Pass  |
-| TC4 | Testar att skriva in en text och se om den analyserar antalet tecken i texten som skrivs/skrivits.|  Pass  |
-| TC5 | Testar att skriva in en text och se om den analyserar antalet meningar i  texten som skrivs/skrivits.|  Pass  |
-| TC6 | Testar att skriva in en text och se om den hittar det längsta ordet i texten som skrivs/skrivits.|  Pass  |
-| TC7 | Testar att skriva in en text och se om den hittar det mest använda ordet i texten som skrivs/skrivits.|  Pass  |
-| TC8 | Testar att skriva in en text och se om den analyserar antalet vokaler i texten som skrivs/skrivits.|  Pass  |
-| TC9 | Testar att skriva in en text och se om den analyserar  antalet konsonanter i texten som skrivs/skrivits.|  Pass  |
-| TC10 | Testar att skriva in en text och se om den analyserar antalet versaler i texten som skrivs/skrivits.|  Pass  |
-| TC11 | Testar att skriva in en text och se om den analyserar antalet gemener i  texten som skrivs/skrivits.|  Pass  |
-| TC12 | Testar att skriva in en text och se om den analyserar antalet siffror i  texten som skrivs/skrivits.|  Pass  |
-| TC13 | Testar att skriva in en text och se om den analyserar antalet mellanslag i  texten som skrivs/skrivits.|  Pass  |
-| TC14 | Testar att skriva in en text och se om den analyserar antalet specialtecken i  texten som skrivs/skrivits.|  Pass  |
-| TC15 | Testar att skriva in en text och se om den analyserar vilket språk texten är skriven på.|  Pass (När texten skrivits klart) |
-| TC16 | Testar att skriva in en kodsnutt.|  Pass  |
-| TC17 | Testar att kopiera in massa text. |  Pass  |
+| Test | Beskrivning               | Utfall PASS/FAIL | Krav |
+|------|---------------------------|------------------|-----------| 
+| TC1 | Starta applikationen och se om man kommer till startsidan. |  Pass  | [1](https://github.com/maddelen/1DV610-L3/issues/18) |
+| TC2 | Testar att skriva in en text och se om den analyserar texten som skrivs/skrivits.|  Pass  | [2](https://github.com/maddelen/1DV610-L3/issues/19) |
+| TC3 | Testar att skriva in en text och se om den analyserar antalet ord i texten som skrivs/skrivits.|  Pass  | [3](https://github.com/maddelen/1DV610-L3/issues/1) |
+| TC4 | Testar att skriva in en text och se om den analyserar antalet tecken i texten som skrivs/skrivits.|  Pass  | [4](https://github.com/maddelen/1DV610-L3/issues/2) |
+| TC5 | Testar att skriva in en text och se om den analyserar antalet meningar i  texten som skrivs/skrivits.|  Pass  | [5](https://github.com/maddelen/1DV610-L3/issues/3) |
+| TC6 | Testar att skriva in en text och se om den hittar det längsta ordet i texten som skrivs/skrivits.|  Pass  | [6](https://github.com/maddelen/1DV610-L3/issues/11) |
+| TC7 | Testar att skriva in en text och se om den hittar det mest använda ordet i texten som skrivs/skrivits.|  Pass  | [7](https://github.com/maddelen/1DV610-L3/issues/13) |
+| TC8 | Testar att skriva in en text och se om den analyserar antalet vokaler i texten som skrivs/skrivits.|  Pass  | [8](https://github.com/maddelen/1DV610-L3/issues/4) |
+| TC9 | Testar att skriva in en text och se om den analyserar  antalet konsonanter i texten som skrivs/skrivits.|  Pass  | [9](https://github.com/maddelen/1DV610-L3/issues/5) |
+| TC10 | Testar att skriva in en text och se om den analyserar antalet versaler i texten som skrivs/skrivits.|  Pass  | [10](https://github.com/maddelen/1DV610-L3/issues/6) |
+| TC11 | Testar att skriva in en text och se om den analyserar antalet gemener i  texten som skrivs/skrivits.|  Pass  | [11](https://github.com/maddelen/1DV610-L3/issues/7) |
+| TC12 | Testar att skriva in en text och se om den analyserar antalet siffror i  texten som skrivs/skrivits.|  Pass  | [12](https://github.com/maddelen/1DV610-L3/issues/8) |
+| TC13 | Testar att skriva in en text och se om den analyserar antalet mellanslag i  texten som skrivs/skrivits.|  Pass  | [13](https://github.com/maddelen/1DV610-L3/issues/9) |
+| TC14 | Testar att skriva in en text och se om den analyserar antalet specialtecken i  texten som skrivs/skrivits.|  Pass  | [14](https://github.com/maddelen/1DV610-L3/issues/10) |
+| TC15 | Testar att skriva in en text och se om den analyserar vilket språk texten är skriven på.|  Pass (När texten skrivits klart) | [15](https://github.com/maddelen/1DV610-L3/issues/12) |
+| TC16 | Testar att skriva in en kodsnutt.|  Pass  | [16](https://github.com/maddelen/1DV610-L3/issues/14) |
+| TC17 | Testar att kopiera in massa text. |  Pass  | [17](https://github.com/maddelen/1DV610-L3/issues/14) |
 
 <br>
 
-### TC 1
-<b>Beskrivning:</b> Starta applikationen och se om man kommer till startsidan.
-
+## Testfall
+<details>
+<summary>
+<b> TC 1: Starta applikationen och se om man kommer till startsidan.</b>
+</summary>
+<br>
 <b>Testinstruktioner:</b>
 1. Öppna upp terminalen i visual studio code.
 2. Skriv in `npm run dev`
@@ -43,9 +45,13 @@ Nu borde startsidan av applikationen visas (se bild nedan).
 ![Start](/src/images/start.png)
 
 <hr>
-
-### TC 2 - 15
-<b>Beskrivning:</b> Testar att skriva in en text och se om den analyserar texten som skrivs/skrivits.
+</details>
+<br>
+<details>
+<summary>
+<b>TC 2 - 15: Testar att skriva in en text och se om den analyserar texten som skrivs/skrivits.</b>
+</summary>
+<br>
 
 <b>Testinstruktioner:</b>
 1. Öppna upp terminalen i visual studio code.
@@ -59,9 +65,13 @@ Texten ska börja analyseras i realtid och du ska kunna se antalet ord, tecken, 
 
 ![Analyzing text](/src/images/analyzing-text.png)
 <hr>
-
-### TC 16
-<b>Beskrivning:</b> Testar att skriva in en kodsnutt.
+</details>
+<br>
+<details>
+<summary>
+<b>TC 16: Testar att skriva in en kodsnutt.</b>
+</summary>
+<br>
 
 <b>Testinstruktioner:</b>
 1. Öppna upp terminalen i visual studio code.
@@ -77,9 +87,13 @@ Du bör direkt få ett meddelande som säger att det inte är tillåtet att anv�
 
 ![Error message1](/src/images/error-message1.png)
 <hr>
-
-### TC 17
-<b>Beskrivning:</b> Testar att kopiera in massa text.
+</details>
+<br>
+<details>
+<summary>
+<b>TC 17: Testar att kopiera in massa text.</b>
+</summary>
+<br>
 
 <b>Testinstruktioner:</b>
 1. Öppna upp terminalen i visual studio code.
@@ -94,3 +108,5 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 Du bör få ett meddelande som säger att det inte är tillåtet att skriva mer än 2000 ord (se bild nedan).
 
 ![Error message2](/src/images/error-message2.png)
+<hr>
+</details>
